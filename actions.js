@@ -29,14 +29,14 @@ const deleteComment = id => {
     }
 }
 
-const like = id => {
+const thumbUp = id => {
     return {
         type: THUMB_UP,
         id
     }
 }
 
-const dislike = id => {
+const thumbDown = id => {
     return {
         type: THUMB_DOWN,
         id
@@ -46,5 +46,5 @@ const dislike = id => {
 const boundeditComment = (text, id) => dispatch(editComment(text, id));
 const boundAddComment = text => dispatch(addComment(text));
 const boundDeleteComment = id => dispatch(deleteComment(id));
-const boundLike = id => dispatch(like(id));
-const dislike = id => dispatch(dislike(id));
+const boundLike = id => dispatch(thumbUp(id));
+const dislike = id => dispatch(thumbDown(id));
