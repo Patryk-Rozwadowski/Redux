@@ -12,7 +12,7 @@ export const comments = (state = [], action) => {
 
         case EDIT_COMMENT:
             return Object.assign({}, state, {
-                comments: [
+                comment: [
                     {
                         id: action.id,
                         text: action.text

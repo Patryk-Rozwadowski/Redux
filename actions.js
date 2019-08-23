@@ -1,10 +1,10 @@
 import uuid from 'uuid';
 
-const ADD_COMMENT = 'ADD_COMMENT';
-const EDIT_COMMENT = 'EDIT_COMMENT';
-const DELETE_COMMENT = 'DELETE_COMMENT';
-const THUMB_UP = 'LIKE';
-const THUMB_DOWN = 'DISLIKE';
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';
+export const DELETE_COMMENT = 'DELETE_COMMENT';
+export const THUMB_UP = 'LIKE';
+export const THUMB_DOWN = 'DISLIKE';
 
 const addComment = (text) => {
     return {
