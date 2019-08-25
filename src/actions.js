@@ -14,7 +14,7 @@ const addComment = (text) => {
     }
 }
 
-const editComment = (text, id) => {
+export const editComment = (text, id) => {
     return {
         type: EDIT_COMMENT,
         text,
@@ -43,8 +43,4 @@ const thumbDown = id => {
     }
 }
 
-const boundeditComment = (text, id) => dispatch(editComment(text, id));
-const boundAddComment = text => dispatch(addComment(text));
-const boundDeleteComment = id => dispatch(deleteComment(id));
-const boundLike = id => dispatch(thumbUp(id));
-const dislike = id => dispatch(thumbDown(id));
+export default addComment;

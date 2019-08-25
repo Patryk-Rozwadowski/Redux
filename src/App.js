@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CommentsList from './CommentsListContainer'
 
 function App() {
   return (
     <div className="App">
-      
+      <CommentsList />
     </div>
   );
 }
