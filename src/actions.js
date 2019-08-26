@@ -6,7 +6,7 @@ export const DELETE_COMMENT = 'DELETE_COMMENT';
 export const THUMB_UP = 'LIKE';
 export const THUMB_DOWN = 'DISLIKE';
 
-const addComment = (text) => {
+export const addComment = (text) => {
     return {
         type: ADD_COMMENT,
         text,
@@ -29,7 +29,7 @@ const deleteComment = id => {
     }
 }
 
-const thumbUp = id => {
+export const thumbUp = id => {
     return {
         type: THUMB_UP,
         id
@@ -42,5 +42,3 @@ const thumbDown = id => {
         id
     }
 }
-
-export default addComment;

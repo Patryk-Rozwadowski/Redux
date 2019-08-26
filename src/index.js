@@ -1,31 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { combineReducers } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
 import comments from './comments.js';
 import users from './users.js';
-import addComment from './actions.js';
+import {addComment} from './actions.js';
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import DevTools from './DevTools';
+
+
 const reducer = combineReducers({
     comments,
     users
 });
-const store = createStore(reducer);
 
+const store = createStore(
+    reducer,
+    DevTools.instrument()
+);
 ReactDOM.render(
     <Provider store={store}>
         <App />
     </Provider>,
     document.getElementById('root'));
 
-store.dispatch(addComment('First '));
-store.dispatch(addComment(' comment'));
+store.dispatch(addComment('First commnet'));
+store.dispatch(addComment('Second comment'));
+store.dispatch(addComment('thr commnet'));
+store.dispatch(addComment('th comment'));
+
 
 
 serviceWorker.unregister();
