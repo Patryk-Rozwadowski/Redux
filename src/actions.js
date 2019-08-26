@@ -3,8 +3,8 @@ import uuid from 'uuid';
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const DELETE_COMMENT = 'DELETE_COMMENT';
-export const THUMB_UP = 'LIKE';
-export const THUMB_DOWN = 'DISLIKE';
+export const THUMB_UP = 'THUMB_UP';
+export const THUMB_DOWN = 'THUMB_DOWN';
 
 export const addComment = (text) => {
     return {
@@ -22,21 +22,21 @@ export const editComment = (text, id) => {
     }
 }
 
-const deleteComment = id => {
+export const deleteComment = id => {
     return {
         type: DELETE_COMMENT,
         id
     }
 }
 
-export const thumbUp = id => {
+export const thumbUp = (commentId) => {
     return {
         type: THUMB_UP,
-        id
+        id: commentId
     }
 }
 
-const thumbDown = id => {
+export const thumbDown = id => {
     return {
         type: THUMB_DOWN,
         id

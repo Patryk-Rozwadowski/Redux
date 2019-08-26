@@ -30,5 +30,7 @@ ReactDOM.render(
     document.getElementById('root'));
 
 store.dispatch(addComment('First commnet'));
+store.dispatch(addComment('Seconds commnet'));
+
 
 serviceWorker.unregister();
