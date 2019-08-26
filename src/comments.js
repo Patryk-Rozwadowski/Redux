@@ -6,9 +6,9 @@ const comments = (state = [], action) => {
             return [{
                 id: action.id,
                 text: action.text,
-                votes: 0,
-                ...state
-            }];
+                votes: 0
+            },
+        ...state];
 
         case EDIT_COMMENT:
             return state.map(comment => {

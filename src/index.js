@@ -5,7 +5,7 @@ import { createStore, combineReducers } from 'redux';
 
 import comments from './comments.js';
 import users from './users.js';
-import {addComment} from './actions.js';
+import { addComment } from './actions.js';
 
 import './index.css';
 import App from './App';
@@ -30,10 +30,5 @@ ReactDOM.render(
     document.getElementById('root'));
 
 store.dispatch(addComment('First commnet'));
-store.dispatch(addComment('Second comment'));
-store.dispatch(addComment('thr commnet'));
-store.dispatch(addComment('th comment'));
-
-
 
 serviceWorker.unregister();
