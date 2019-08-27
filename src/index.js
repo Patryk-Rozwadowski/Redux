@@ -31,6 +31,7 @@ ReactDOM.render(
 
 store.dispatch(addComment('First commnet'));
 store.dispatch(addComment('Seconds commnet'));
-
+store.dispatch(addComment('Third commnet'));
+store.dispatch(addComment('Fourth commnet'));
 
 serviceWorker.unregister();

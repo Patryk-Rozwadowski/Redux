@@ -1,10 +1,10 @@
 import React from 'react';
 import Comment from './CommentContainer';
 
-const CommentsList = ({ comments }) =>
+const CommentsList = (props) =>
 
     <ul>
-        {comments.map(comment => <Comment key={comment.id} {...comment} />)}
+        {props.comments.map(comment => <Comment key={comment.id} {...comment} />)}
     </ul>;
 
 
